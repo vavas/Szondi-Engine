@@ -1,0 +1,19 @@
+version: '2'
+services:
+  szondi-engine:
+    image: golang:1.8
+    volumes:
+      - .:/go/src/github.com/vavas/Szondi-Engine
+    working_dir: /go/src/github.com/vavas/Szondi-Engine
+    command: ./dist/szondi-engine
+    expose:
+      - 8080
+    environment:
+      PROJECT_NAME: szondi-engine
+      PROJECT_BUILD: dev
+      DB_TEST_DSN:
+      DB_DSN:
+      DB_CA_CERTIFICATE:
+      DB_MIGRATION_DIR: ./migrations
+
+

@@ -1,0 +1,19 @@
+# Docker
+docker-compose.override.yml
+Dockerfile
+
+# Go workspace
+_workspace/
+src/
+pkg/
+
+# The app build from go build
+dist/
+
+# App dependencies
+vendor/*/
+certs/
+
+# Reporting
+reports/
+coverage.*
